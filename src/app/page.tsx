@@ -9,13 +9,15 @@ const fetchUsers = async () => {
 
 
 export default async function Home() {
+
   const users = await fetchUsers()
+
   return (
-    <main className="flex flex-col h-screen justify-center items-center bg-slate-200">
-      <h1 className="text-3xl">Home page</h1>
+    <div className="p-8 flex flex-col items-center justify-center h-screen">
+      <h1 className="text-3xl">List app 13</h1>
       {users.data.map((user:any) => (
         <User key={user.id} user={user} />
       ))}
-    </main>
+    </div>
   )
 }

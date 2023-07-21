@@ -14,9 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >
+      <body className='bg-slate-100'>
         <Navigation />
-        {children}</body>
+        <main className="container mx-auto bg-slate-200">
+          {children}
+        </main>
+
+      </body>
     </html>
   )
 }
